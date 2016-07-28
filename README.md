@@ -1,2 +1,2 @@
 # Python_InteractiveGames
-Integractive games in python
+Interactive games in python
