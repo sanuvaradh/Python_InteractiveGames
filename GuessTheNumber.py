@@ -1,4 +1,4 @@
-# "Guess the number" mini-project developed for Coursera course on Integractive programming in python from Rice university
+# "Guess the number" mini-project developed for Coursera course on Interactive programming in python from Rice university
 # input will come from buttons and an input field
 # all output for the game will be printed in the console
 
@@ -11,14 +11,15 @@ high=100
 num_guesses=7
 secret_num=0
 def new_game():
+    """
+    Function to start a new game
+    """
     global num_guesses,high,secret_num
-    # initialize global variables used in your code here
     print "New game! Range is from 0 to "+str(high)
     secret_num=random.randrange(0, high)
     num_guesses= int(math.ceil((math.log(high+1))/(math.log (2))))
     print "Number of remaining guesses: "+ str(num_guesses)
     print "    "
-
 
 # define event handlers for control panel
 def range100():
@@ -35,6 +36,9 @@ def range1000():
     new_game()
     
 def input_guess(guess):
+    """
+    Function for actual game: provide hint about the actual number to the player based on the current guess
+    """
     global num_guesses
     print "Your Guess was " +str(guess)
     num_guesses=num_guesses-1    
