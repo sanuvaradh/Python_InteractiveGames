@@ -1,11 +1,9 @@
 # A modified version of Rock-paper-scissors-lizard-Spock developed as part of project for coursera course
 #on interactive programming in python (from Rice university)
 # This program will get the player's input( 5 input cases), generate the computer's random input, and will decide the winner
-
 # The key idea of this program is to equate the strings
 # "rock", "paper", "scissors", "lizard", "Spock" to numbers
 # as follows:
-#
 # 0 - rock
 # 1 - Spock
 # 2 - paper
@@ -15,7 +13,7 @@
 # helper functions
 
 def name_to_number(name):
-    """
+"""
 This function returns a number corresponding to the name 
 passed in accordance with the list at the start of this program
 """
@@ -31,17 +29,12 @@ passed in accordance with the list at the start of this program
         return 4
     else:
         print "Invalid name"
-       
 
-    """
+def number_to_name(number):
+"""
 This function returns a name corresponding to the number 
 passed in accordance with the list at the start of this program
 """
-def number_to_name(number):
-    """
-    This function returns a name corresponding to the number 
-    passed in accordance with the list at the start of this program
-    """
     if number==0:
         return "rock"
     elif number==1:
@@ -55,19 +48,16 @@ def number_to_name(number):
     else:
         print "Invalid number"
     
-    
-
 def rpsls(player_choice):
-    """
+"""
+Function for the actual game
 This function will get the player's input, generate the
 computer's random input, and will decide the winner.
 """
     # print a blank line to separate consecutive games
     print "\n "
-
     # print out the message for the player's choice
     print "Player chooses "+ player_choice
-
     # convert the player's choice to player_number using the function name_to_number()
     player_number=name_to_number(player_choice)
     # compute random guess for comp_number using random.randrange()
@@ -89,7 +79,7 @@ computer's random input, and will decide the winner.
     else:
         print "Game not played well! Error in computer or player input!"
 
-        
+#Test with every player choice        
 rpsls("rock")
 rpsls("Spock")
 rpsls("paper")
